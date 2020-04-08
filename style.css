@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -63,7 +67,6 @@ body {
 
 .content__title > a {
   color: white;
-  text-decoration: none;
 }
 
 .latest__title {
@@ -106,13 +109,32 @@ body {
   color: rgb(128, 126, 126);
 }
 
+.funding-title {
+  margin: 60px 30px 20px;
+  line-height: 2;
+}
+
+.funding-title > h2 > a {
+  font-size: 2rem;
+  color: red;
+}
+
+.funding-title > ul {
+  list-style: none;
+}
+
+.funding-title > ul > li > a {
+  color: red;
+}
+
 .funds {
   display: grid;
-  grid-template-rows: repeat(3, 230px);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .funds__items {
   margin: 10px 30px;
+  background-color: rgb(246, 241, 243);
 }
 
 .funds__items-header {
@@ -129,7 +151,7 @@ body {
 
 .funds-amount {
   padding: 15px 0 15px 100px;
-  background-color: #d6bcb2;
+  background-color: #f0e5e0;
 }
 
 .funds-img {
@@ -150,4 +172,29 @@ body {
   font-weight: lighter;
   color: rgb(71, 71, 71);
   text-transform: uppercase;
+}
+
+.funds-info,
+.funds-footer {
+  font-size: 13px;
+  color: rgb(78, 78, 78);
+}
+
+.funds-info {
+  list-style: none;
+  margin: 25px 0 20px 8px;
+}
+
+.funds-info > li {
+  margin: 10px 0;
+}
+
+.funds-info > li > i {
+  margin-right: 10px;
+  font-size: 15px;
+}
+
+.funds-footer {
+  text-transform: uppercase;
+  margin: 15px 8px;
 }
