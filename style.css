@@ -391,7 +391,7 @@ small .features {
   color: black;
 }
 
-.funding-title > ul > li > a {
+.funding-title-link {
   color: red;
 }
 
