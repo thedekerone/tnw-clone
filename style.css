@@ -9,6 +9,7 @@
 small {
   font-weight: 400;
   font-size: 0.8rem;
+  color:red
 }
 
 a {
@@ -131,6 +132,7 @@ body {
 .news__item {
   position: relative;
   overflow: hidden;
+  display: block;
   max-height: 400px;
 }
 
@@ -273,6 +275,7 @@ body {
 }
 
 .funds-category > a,
+.funds-company > a,
 .funds-info > a,
 .funds__items-header > a,
 .funds-footer > a {
