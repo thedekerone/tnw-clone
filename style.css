@@ -198,3 +198,24 @@ body {
   text-transform: uppercase;
   margin: 15px 8px;
 }
+
+
+/*features*/
+
+.features-item__latest{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.features__latest-img{
+  width: 96px;
+  height: 96px;
+  background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/DDFree-movies.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.features__latest-title{
+  padding: 15px 20px;
+}
