@@ -9,7 +9,7 @@
 small {
   font-weight: 400;
   font-size: 0.8rem;
-  color:red
+  color: red;
 }
 
 a {
@@ -68,6 +68,7 @@ body {
 .dropdown > ul > li {
   padding: 10px 20px;
 }
+
 .dropdown-container:hover .dropdown {
   display: block;
 }
@@ -201,6 +202,7 @@ body {
   padding: 0 30px;
   gap: 15px;
 }
+
 .latest__news-item {
   display: flex;
   justify-content: flex-start;
