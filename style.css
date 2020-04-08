@@ -258,3 +258,59 @@ body {
 .features-ul > li > a:hover {
   color: black;
 }
+
+/* footer */
+
+footer{
+  background:black;
+  padding: 3rem;
+  margin-top:7rem;
+}
+
+.footer-list, .footer-list > li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-list > li{
+  margin: 0 .3rem;
+  
+}
+
+.footer-social >li >a{
+  color:white;
+}
+
+.footer-social >li{
+  width: 40px;
+  font-size: 1.2rem;
+  height: 40px;
+  background-color: rgb(54, 54, 54);
+  border-radius: 100%;
+}
+
+.footer-nav{
+  margin-top: 1.8rem;
+  text-transform: uppercase;
+  font-size:.8rem;
+}
+
+.footer-nav >li >a{
+  color:rgb(194, 194, 194)
+}
+
+.copyright{
+  margin-top:70px;
+  color:rgb(209, 207, 207);
+  text-align: center;
+  font-size: .8rem;
+}
+
+.copyright img[src*="tnw.svg"]{
+  width: 40px;
+}
+
+.copyright img[src*="stackpath.svg"]{
+  width: 70px;
+}
