@@ -35,7 +35,7 @@ body {
   align-items: center;
 }
 
-.dropdown > ul > li {
+.dropdown-list {
   padding: 10px 20px;
 }
 
@@ -127,13 +127,6 @@ body {
 
 .fa-search {
   color: rgb(138, 138, 138);
-}
-
-.latest__title > a {
-  text-decoration: none;
-  color: red;
-  font-size: 2rem;
-  font-weight: bold;
 }
 
 .news-item__content > a {
@@ -247,17 +240,8 @@ body {
   line-height: 2;
 }
 
-.funding-title > h2 > a {
-  font-size: 2rem;
-  color: red;
-}
-
 .funding-title > ul {
   list-style: none;
-}
-
-.funding-title > ul > li > a {
-  color: red;
 }
 
 .funds {
@@ -407,6 +391,14 @@ small .features {
   color: black;
 }
 
+.funding-title > ul > li > a {
+  color: red;
+}
+
+.funding-title > h2 > a {
+  font-size: 2rem;
+  color: red;
+}
 /* footer */
 
 footer {
