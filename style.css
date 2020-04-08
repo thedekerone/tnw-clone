@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+small{
+  font-weight: 400;
+  font-size: .8rem;
+}
+
 a {
   text-decoration: none;
 }
@@ -79,9 +84,18 @@ body {
   height: 100%;
   padding: 15px 10px;
 }
-.fa-bars {
+
+.fa-bars, .fa-search{
   border-left: 1px solid rgb(150, 150, 150);
   padding: 15px 20px;
+}
+
+.fa-bars {
+  color:red;
+}
+
+.fa-search {
+  color: rgb(138, 138, 138);
 }
 
 .lower-nav-links {
@@ -105,11 +119,7 @@ body {
   color: black;
 }
 
-.fa-search {
-  color: rgb(138, 138, 138);
-  border-left: 1px solid gray;
-  padding: 15px 20px;
-}
+
 
 .news {
   width: 100%;
@@ -174,6 +184,12 @@ body {
   font-weight: bold;
 }
 
+.title__deals{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .latest__news {
   display: grid;
   grid-template-rows: repeat(8, 75px);
@@ -197,7 +213,7 @@ body {
 .news-title {
   font-size: 1rem;
   font-weight: bold;
-}
+}s
 
 .news-date {
   font-size: 0.8rem;
@@ -206,6 +222,8 @@ body {
 }
 
 .funding-title {
+  display: flex;
+  flex-direction: column;
   margin: 60px 30px 20px;
   line-height: 2;
 }
@@ -225,7 +243,7 @@ body {
 
 .funds {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 }
 
 .funds__items {
@@ -314,6 +332,7 @@ body {
 .features__latest-img {
   width: 96px;
   height: 96px;
+  flex-shrink: 0;
   background-image: url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/DDFree-movies.jpg);
   background-size: cover;
   background-position: center center;
@@ -415,7 +434,87 @@ footer {
 /* Media queries*/
 
 @media screen and (min-width: 800px) {
-  footer {
+
+  html{
+    font-size: 13px;
+  }
+
+  .fa-bars, .logo{
     display: none;
   }
+
+  .upper-nav, .lower-nav-links{
+    display: flex;
+  }
+
+  .news {
+    grid-template-rows: repeat(2, 24vh);
+    grid-template-columns: 2fr 1fr;
+    gap: .5rem;
+  }
+
+  .news__item{
+    height: 100%;
+    max-height: none;
+  }
+
+  .news > div:nth-child(1){
+    grid-row: 1 / 3;
+    height: 100%;
+    max-height: none;
+  }
+
+  .latest, .funding-title, .funds, .features{
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .latest__news, .funds {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    padding: 0 ;
+    gap: 27px;
+  }
+  
+  .latest__news-item{
+    flex-direction: column;
+  }
+
+  .news-item__img-img{
+    width: 100%;
+    height: auto;
+  } 
+  
+  .news-item__content {
+    padding: 0;
+  }
+
+  .funding-title{
+    margin-top: 40px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .funding-title > ul > li{
+    display: inline;
+    padding: 0 10px;
+    border-left: 1px solid red;
+  }
+
+  .funds__items{
+    margin: 25px 0;
+  }
+
+  .features{
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 25px;
+  }
+
+  .latest__title{
+    margin-left: 0;
+  }
+
 }
