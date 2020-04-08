@@ -62,14 +62,14 @@ body {
   font-weight: bold;
 }
 
-.upper-nav > ul > li {
+.nav-list-item {
   display: inline;
   position: relative;
   margin-left: 10px;
   font-size: 0.9rem;
 }
 
-.upper-nav > ul > li:first-child {
+.nav-list-item:first-child {
   margin: 0;
 }
 
@@ -545,6 +545,7 @@ footer {
   }
 
   .features {
+    display: grid;
     grid-template-rows: auto;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 25px;
