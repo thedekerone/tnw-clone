@@ -14,6 +14,34 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/*Nav section*/
+
+.upper-nav{
+  display: flex;
+  padding: 8px 30px;
+  background-color: black;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.upper-nav >ul >li {
+  display: inline;
+  margin-left: 10px;
+  font-size: .9rem;
+}
+
+.upper-nav >ul >li:first-child{
+  margin:0
+} 
+
+.nav-link{
+  color:rgb(189, 189, 189);
+}
+
+.active{
+  color:white;
+}
+
 .news {
   width: 100%;
   display: grid;
@@ -313,4 +341,13 @@ footer{
 
 .copyright img[src*="stackpath.svg"]{
   width: 70px;
+}
+
+
+/* Media queries*/
+
+@media screen and (min-width:800px){
+  footer{
+    display: none;
+  }
 }
