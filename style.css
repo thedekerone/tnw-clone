@@ -44,18 +44,18 @@ body {
   display: inline;
 }
 
-.lower-nav-links > li > a {
+.nav-link {
   color: rgb(175, 175, 175);
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: bold;
 }
 
-.lower-nav-links > li > a:hover {
+.nav-link:hover {
   color: black;
 }
 
-.lower-nav-links .latest__title > a {
+.latest__title > a {
   text-decoration: none;
   color: red;
   font-size: 2rem;
