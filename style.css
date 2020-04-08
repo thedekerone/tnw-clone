@@ -20,7 +20,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-
 /* Nav section */
 
 .content__title > a {
@@ -71,10 +70,6 @@ body {
 
 .nav-list-item:first-child {
   margin: 0;
-}
-
-.nav-link {
-  color: rgb(189, 189, 189);
 }
 
 .active {
@@ -155,7 +150,7 @@ body {
   width: 100%;
   height: 100%;
   background: rgb(145, 145, 145);
-  background: linear-gradient(180deg,rgba(145, 145, 145, 0) 0%,rgba(0, 0, 0, 0.6632200886262924) 53%,rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(180deg, rgba(145, 145, 145, 0) 0%, rgba(0, 0, 0, 0.6632200886262924) 53%, rgba(0, 0, 0, 1) 100%);
   bottom: 0;
   left: 0;
 }
@@ -387,6 +382,11 @@ small .features {
   color: rgb(112, 104, 104);
 }
 
+.funding-title > h2 > a {
+  font-size: 2rem;
+  color: red;
+}
+
 .features-ul > li > a:hover {
   color: black;
 }
@@ -395,10 +395,6 @@ small .features {
   color: red;
 }
 
-.funding-title > h2 > a {
-  font-size: 2rem;
-  color: red;
-}
 /* footer */
 
 footer {
@@ -418,7 +414,7 @@ footer {
   margin: 0 0.3rem;
 }
 
-.footer-social > li > a {
+.footer-link-social {
   color: white;
 }
 
@@ -436,7 +432,7 @@ footer {
   font-size: 0.8rem;
 }
 
-.footer-nav > li > a {
+.footer-link-nav {
   color: rgb(194, 194, 194);
 }
 
