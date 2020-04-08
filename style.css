@@ -6,9 +6,9 @@
   box-sizing: border-box;
 }
 
-small{
+small {
   font-weight: 400;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 a {
@@ -85,13 +85,14 @@ body {
   padding: 15px 10px;
 }
 
-.fa-bars, .fa-search{
+.fa-bars,
+.fa-search {
   border-left: 1px solid rgb(150, 150, 150);
   padding: 15px 20px;
 }
 
 .fa-bars {
-  color:red;
+  color: red;
 }
 
 .fa-search {
@@ -118,8 +119,6 @@ body {
 .lower-nav-links > li > a:hover {
   color: black;
 }
-
-
 
 .news {
   width: 100%;
@@ -179,12 +178,16 @@ body {
   margin-top: 100px;
   margin-bottom: 20px;
   margin-left: 30px;
+}
+
+.latest__title > a {
+  text-decoration: none;
   color: red;
   font-size: 2rem;
   font-weight: bold;
 }
 
-.title__deals{
+.title__deals {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -210,15 +213,29 @@ body {
   padding-left: 15px;
 }
 
+.news-item__content > a {
+  text-decoration: none;
+  color: black;
+}
+
 .news-title {
+  display: block;
   font-size: 1rem;
   font-weight: bold;
-}s
+}
+
+.news-title:hover {
+  color: red;
+}
 
 .news-date {
   font-size: 0.8rem;
   padding-top: 10px;
-  color: rgb(128, 126, 126);
+  color: rgb(161, 161, 161);
+}
+
+.news-date:hover {
+  color: rgb(100, 100, 100);
 }
 
 .funding-title {
@@ -253,6 +270,13 @@ body {
 
 .funds__items-header {
   position: relative;
+}
+
+.funds-category > a,
+.funds-info > a,
+.funds__items-header > a,
+.funds-footer > a {
+  color: rgb(105, 105, 105);
 }
 
 .funds-title {
@@ -291,7 +315,6 @@ body {
 .funds-info,
 .funds-footer {
   font-size: 13px;
-  color: rgb(78, 78, 78);
 }
 
 .funds-info {
@@ -344,12 +367,19 @@ body {
   color: red;
 }
 
-.features__latest-title > h4 {
+.features__latest-title > a {
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
   padding-top: 5px;
 }
 
 .features-item__title {
   margin: 60px 0 20px 0;
+}
+
+.features-item__title > a {
+  text-decoration: none;
   color: red;
   font-size: 2rem;
   font-weight: bold;
@@ -434,87 +464,91 @@ footer {
 /* Media queries*/
 
 @media screen and (min-width: 800px) {
-
-  html{
+  html {
     font-size: 13px;
   }
 
-  .fa-bars, .logo{
+  .fa-bars,
+  .logo {
     display: none;
   }
 
-  .upper-nav, .lower-nav-links{
+  .upper-nav,
+  .lower-nav-links {
     display: flex;
   }
 
   .news {
     grid-template-rows: repeat(2, 24vh);
     grid-template-columns: 2fr 1fr;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
-  .news__item{
+  .news__item {
     height: 100%;
     max-height: none;
   }
 
-  .news > div:nth-child(1){
+  .news > div:nth-child(1) {
     grid-row: 1 / 3;
     height: 100%;
     max-height: none;
   }
 
-  .latest, .funding-title, .funds, .features{
+  .latest,
+  .funding-title,
+  .funds,
+  .features {
     max-width: 1160px;
     width: 100%;
     margin: 0 auto;
   }
 
-  .latest__news, .funds {
+  .latest__news,
+  .funds {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: auto;
-    padding: 0 ;
+    padding: 0;
     gap: 27px;
   }
-  
-  .latest__news-item{
+
+  .latest__news-item {
     flex-direction: column;
   }
 
-  .news-item__img-img{
+  .news-item__img-img {
     width: 100%;
     height: auto;
-  } 
-  
+  }
+
   .news-item__content {
     padding: 0;
   }
 
-  .funding-title{
+  .funding-title {
     margin-top: 40px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
 
-  .funding-title > ul > li{
+  .funding-title > ul > li {
     display: inline;
     padding: 0 10px;
     border-left: 1px solid red;
   }
 
-  .funds__items{
+  .funds__items {
     margin: 25px 0;
   }
 
-  .features{
+  .features {
     grid-template-rows: auto;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 25px;
   }
 
-  .latest__title{
+  .latest__title {
     margin-left: 0;
   }
-
 }
