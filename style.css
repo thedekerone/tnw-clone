@@ -76,6 +76,15 @@ body {
   color: white;
 }
 
+.nav-announcement {
+  display: none;
+  background-color: #ffdd33;
+}
+
+.announcement {
+  padding: 8px 25px;
+}
+
 .dropdown {
   position: absolute;
   display: none;
@@ -144,21 +153,52 @@ body {
   max-height: 400px;
 }
 
+.news-logo {
+  display: none;
+  position: absolute;
+  width: 30%;
+  height: auto;
+  top: 10px;
+  left: 25px;
+}
+
 .news__item::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   background: rgb(145, 145, 145);
-  background: linear-gradient(180deg, rgba(145, 145, 145, 0) 0%, rgba(0, 0, 0, 0.6632200886262924) 53%, rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(145, 145, 145, 0) 0%,
+    rgba(0, 0, 0, 0.6632200886262924) 53%,
+    rgba(0, 0, 0, 1) 100%
+  );
   bottom: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.red-gradient::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 38, 0);
+  background: linear-gradient(
+    164deg,
+    rgba(255, 38, 0, 1) 0%,
+    rgba(255, 0, 0, 0) 72%
+  );
+  z-index: -1;
+  top: 0;
   left: 0;
 }
 
 .news__item-img {
   width: 100%;
   position: relative;
-  z-index: -1;
+  z-index: -3;
 }
 
 .news__item-content {
@@ -247,6 +287,10 @@ body {
 .funds__items {
   margin: 10px 30px;
   background-color: rgb(246, 241, 243);
+}
+
+.funds__items:last-child {
+  display: none;
 }
 
 .funds__items-header {
@@ -398,9 +442,13 @@ small .features {
 /* footer */
 
 footer {
-  background: black;
-  padding: 3rem;
+  background: rgb(0, 0, 0);
   margin-top: 7rem;
+}
+
+.upper-footer {
+  padding: 3rem;
+  background-color: #131313;
 }
 
 .footer-list,
@@ -437,7 +485,7 @@ footer {
 }
 
 .copyright {
-  margin-top: 70px;
+  padding: 3rem;
   color: rgb(209, 207, 207);
   text-align: center;
   font-size: 0.8rem;
@@ -453,7 +501,7 @@ footer {
 
 /* Media queries */
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
   html {
     font-size: 13px;
   }
@@ -461,6 +509,10 @@ footer {
   .fa-bars,
   .logo {
     display: none;
+  }
+
+  .nav-announcement {
+    display: block;
   }
 
   .upper-nav,
@@ -496,7 +548,7 @@ footer {
 
   .latest__news,
   .funds {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     padding: 0;
     gap: 27px;
@@ -515,6 +567,10 @@ footer {
     padding: 0;
   }
 
+  .news-logo {
+    display: block;
+  }
+
   .funding-title {
     margin-top: 40px;
     flex-direction: row;
@@ -530,6 +586,109 @@ footer {
 
   .funds__items {
     margin: 25px 0;
+  }
+
+  .features {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 25px;
+  }
+
+  .latest__title {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 13px;
+  }
+
+  .fa-bars,
+  .logo {
+    display: none;
+  }
+
+  .nav-announcement {
+    display: block;
+  }
+
+  .upper-nav,
+  .lower-nav-links {
+    display: flex;
+  }
+
+  .news {
+    grid-template-rows: repeat(2, 24vh);
+    grid-template-columns: 2fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .news__item {
+    height: 100%;
+    max-height: none;
+  }
+
+  .news > div:nth-child(1) {
+    grid-row: 1 / 3;
+    height: 100%;
+    max-height: none;
+  }
+
+  .latest,
+  .funding-title,
+  .funds,
+  .features {
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .latest__news,
+  .funds {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: auto;
+    padding: 0;
+    gap: 27px;
+  }
+
+  .latest__news-item {
+    flex-direction: column;
+  }
+
+  .news-item__img-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .news-item__content {
+    padding: 0;
+  }
+
+  .news-logo {
+    display: block;
+  }
+
+  .funding-title {
+    margin-top: 40px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .funding-title > ul > li {
+    display: inline;
+    padding: 0 10px;
+    border-left: 1px solid red;
+  }
+
+  .funds__items {
+    margin: 25px 0;
+  }
+
+  .funds__items:last-child {
+    display: block;
   }
 
   .features {
