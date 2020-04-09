@@ -54,4 +54,4 @@ Give a ⭐️ if you like this project!
 
 ## Live preview
 
-You can check how the website looks in: [Live preview](https://rawcdn.githack.com/thedekerone/tnw-clone/4e5a87e0d0b15d65e0e0eed674622d70609d0ff1/index.html)
+You can check how the website looks in: [Live preview](https://rawcdn.githack.com/thedekerone/tnw-clone/883cbccea6dcd13eb4c5bf92187d7dc2a7ddc49c/index.html)
