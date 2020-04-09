@@ -177,18 +177,6 @@ body {
   z-index: -2;
 }
 
-.red-gradient::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgb(255, 38, 0);
-  background: linear-gradient(164deg, rgba(255, 38, 0, 1) 0%, rgba(255, 0, 0, 0) 72%);
-  z-index: -1;
-  top: 0;
-  left: 0;
-}
-
 .news__item-img {
   width: 100%;
   position: relative;
@@ -498,6 +486,18 @@ footer {
 @media screen and (min-width: 700px) {
   html {
     font-size: 13px;
+  }
+
+  .red-gradient::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 38, 0);
+    background: linear-gradient(164deg, rgba(255, 38, 0, 1) 0%, rgba(255, 0, 0, 0) 72%);
+    z-index: -1;
+    top: 0;
+    left: 0;
   }
 
   .fa-bars {
